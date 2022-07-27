@@ -1,13 +1,10 @@
-
-
-export const  creatCard = (pokemon) => {
-  console.log(pokemon.sprites.other['official-artwork']['front_default']);
+const creatCard = (pokemon) => {
   const row = document.getElementById('row');
   const col = document.createElement('div');
   col.classList.add('col');
 
   const imgCard = document.createElement('div');
-  imgCard.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork']['front_default']})`;
+  imgCard.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;
   imgCard.classList.add('img-card');
   col.appendChild(imgCard);
   // const cardImg = document.createElement('img');
@@ -31,11 +28,10 @@ export const  creatCard = (pokemon) => {
   aTag.href = '#';
 
   const iTag = document.createElement('i');
-  iTag.classList.add('fa-solid','fa-heart');
+  iTag.classList.add('fa-solid', 'fa-heart');
 
   aTag.appendChild(iTag);
-  like.appendChild(aTag)
-
+  like.appendChild(aTag);
 
   col.appendChild(description);
 
@@ -65,4 +61,6 @@ export const  creatCard = (pokemon) => {
   col.appendChild(pokeAction);
 
   row.appendChild(col);
-}
+};
+
+export default creatCard;
