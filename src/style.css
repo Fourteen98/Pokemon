@@ -41,6 +41,9 @@ header {
   padding: 1rem;
   border-radius: 5px;
   background-color: #f5f5f5;
+  max-height: 800px;
+  min-height: 800px;
+  overflow-y: scroll;
 }
 
 .row {
@@ -56,6 +59,14 @@ header {
 .col img {
   width: 10rem;
   height: 8rem;
+}
+
+.img-card {
+  width: 10rem;
+  height: 8rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .description {
@@ -76,7 +87,7 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
