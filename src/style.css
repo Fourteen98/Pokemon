@@ -69,6 +69,25 @@ header {
   background-repeat: no-repeat;
 }
 
+.img-card:hover{
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  cursor: pointer;
+}
+
+.bounce-3 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-3 {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-100px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
 .description {
   padding-top: 2rem;
   display: flex;

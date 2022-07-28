@@ -11,7 +11,7 @@ const creatCard = (pokemon) => {
 
   const cardImg = document.createElement('div');
   cardImg.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;
-  cardImg.classList.add('img-card');
+  cardImg.classList.add('img-card', 'bounce-3');
   col.appendChild(cardImg);
 
   const description = document.createElement('div');
