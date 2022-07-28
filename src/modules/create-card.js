@@ -74,8 +74,7 @@ const creatCard = (pokemon) => {
     })
     .catch((error) => {
       console.log(error);
-    }), 1000 )
-
+    }), 1000);
 
   iTag.addEventListener('click', (e) => {
     const likes = parseInt(likeCount.innerText.split(' ')[0]);

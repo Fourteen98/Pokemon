@@ -1,12 +1,9 @@
 /* eslint-disable no-console */
 // generate random number betweenn 20 and 50
-const randomNumber = () => {
-  return Math.floor(Math.random() * (50 - 20 + 1)) + 20;
-}
+const randomNumber = () => Math.floor(Math.random() * (50 - 20 + 1)) + 20;
 
 const limit = randomNumber();
 const end = randomNumber();
-
 
 // a promise function to make a fetch request to the API
 const fetchApi = async () => {
@@ -14,14 +11,13 @@ const fetchApi = async () => {
   return response.json();
 };
 
-
 export const calculateNumberOfItems = (count) => {
   if (count === limit) {
     console.log('poker cards are equal to limit!');
-  } else {
-    console.log('poker cards are not equal to limit!');
+    return count;
   }
-}
-
+  console.log('poker cards are not equal to limit!');
+  return 0;
+};
 
 export default fetchApi;

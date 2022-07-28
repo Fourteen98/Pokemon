@@ -1,7 +1,6 @@
 import './style.css';
-import fetchApi from './modules/pokemon-api.js';
+import fetchApi, { calculateNumberOfItems } from './modules/pokemon-api.js';
 import creatCard from './modules/create-card.js';
-import {calculateNumberOfItems} from './modules/pokemon-api.js';
 
 const row = document.getElementById('row');
 
@@ -16,4 +15,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     calculateNumberOfItems(row.childElementCount);
   });
 });
-
