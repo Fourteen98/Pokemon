@@ -4,12 +4,12 @@ const createPopup = (item) => {
   modalWrapper.style.zIndex = 99;
   const modal = document.createElement('div');
   modal.classList.add('modal');
-
   // create img
   const divImg = document.createElement('div');
   const img = document.createElement('img');
   img.setAttribute('src', item.img);
   img.setAttribute('alt', `img of ${item.name}`);
+  img.classList.add('modal-img')
   divImg.appendChild(img);
 
   // create title
@@ -21,22 +21,22 @@ const createPopup = (item) => {
   // create info p
   const infoItem = document.createElement('p');
   infoItem.classList.add('information-item');
-  infoItem.textContent = `items: ${item.items}`;
+  infoItem.innerHTML = `<b>items:</b> ${item.items}`;
   divInfo.appendChild(infoItem);
 
   const infoType = document.createElement('p');
   infoType.classList.add('information-games');
-  infoType.textContent = `type: ${item.type}`;
+  infoType.innerHTML = `<b>type: </b>${item.type}`;
   divInfo.appendChild(infoType);
 
   const infoBasicExp = document.createElement('p');
   infoBasicExp.classList.add('information-games');
-  infoBasicExp.textContent = `base experience: ${item.exp}`;
+  infoBasicExp.innerHTML = `<b>base exp:</b> ${item.exp}`;
   divInfo.appendChild(infoBasicExp);
 
   const infoGames = document.createElement('p');
   infoGames.classList.add('information-games');
-  infoGames.textContent = `games: ${item.games}`;
+  infoGames.innerHTML = `<b>games:</b> ${item.games}`;
   divInfo.appendChild(infoGames);
 
   modal.appendChild(divImg);
