@@ -1,3 +1,6 @@
+import getValues from './getValues.js';
+import createPopup from './popupCreator.js';
+
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
   const col = document.createElement('div');
@@ -7,11 +10,6 @@ const creatCard = (pokemon) => {
   imgCard.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;
   imgCard.classList.add('img-card');
   col.appendChild(imgCard);
-  // const cardImg = document.createElement('img');
-  // cardImg.attributes.src = pokemon.sprites.other['official-artwork']['front_default'];
-  //
-  // cardImg.attributes.alt = "pokemon-sprites";
-  // col.appendChild(cardImg);
 
   const description = document.createElement('div');
   description.classList.add('description');
@@ -51,11 +49,9 @@ const creatCard = (pokemon) => {
   pokeActionBtnComment.classList.add('btn', 'btn-outline-dark');
   pokeAction.appendChild(pokeActionBtnComment);
 
-  // const pokeActionReservation = document.createElement('button');
-  // pokeActionReservation.attributes.type = 'button';
-  // pokeActionBtnComment.innerText = 'Information';
-  // pokeActionReservation.classList.add('btn', 'btn-outline-dark');
-  // pokeAction.appendChild(pokeActionReservation);
+  pokeActionBtnComment.addEventListener('click', () => {
+    createPopup(getValues(pokemon));
+  });
 
   col.appendChild(description);
   col.appendChild(pokeAction);
