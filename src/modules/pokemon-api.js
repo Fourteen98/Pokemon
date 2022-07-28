@@ -13,11 +13,7 @@ export const fetchApi = async () => {
 
 export const calculateNumberOfItems = (count) => {
   if (count === limit) {
-    console.log('poker cards are equal to limit!');
     return count;
   }
-  console.log('poker cards are not equal to limit!');
   return 0;
 };
-
-

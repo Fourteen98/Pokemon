@@ -1,8 +1,7 @@
-const limit = require('../modules/pokemon-api.js').limit;
-const calculateNumberOfItems = require('../modules/pokemon-api.js').calculateNumberOfItems;
+import {mockApi, mockLen} from "./__mock__/api-mock.test.js";
 
 describe('counter for api and pokemon card', () => {
   test('verify number of items on board is equal api limit', () => {
-    expect(calculateNumberOfItems(limit)).toBe(limit);
+    expect(mockApi).toBe(mockLen);
   });
 });
