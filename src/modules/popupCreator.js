@@ -9,7 +9,7 @@ const createPopup = (item) => {
   const img = document.createElement('img');
   img.setAttribute('src', item.img);
   img.setAttribute('alt', `img of ${item.name}`);
-  img.classList.add('modal-img')
+  img.classList.add('modal-img');
   divImg.appendChild(img);
 
   // create title

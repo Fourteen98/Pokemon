@@ -60,15 +60,15 @@ const creatCard = (pokemon) => {
   pokeActionBtnComments.classList.add('btn', 'btn-outline-dark');
   pokeAction.appendChild(pokeActionBtnComments);
 
-  // * create infoPopup 
+  // * create infoPopup
   pokeActionBtnInfo.addEventListener('click', () => {
     createPopup(getValues(pokemon));
   });
-  
-  // * create commentPopup 
+
+  // * create commentPopup
   pokeActionBtnComments.addEventListener('click', () => {
-    createCommentPopup(getValues(pokemon))
-  })
+    createCommentPopup(getValues(pokemon));
+  });
 
   col.appendChild(description);
   col.appendChild(pokeAction);

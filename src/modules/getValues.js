@@ -23,7 +23,7 @@ const getValues = (pokemon) => {
     type: types.join(', '),
     games: games.join(', '),
     exp: pokemon.base_experience,
-    id: pokemon.id
+    id: pokemon.id,
   };
   return arr;
 };
