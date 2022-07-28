@@ -44,7 +44,7 @@ header {
   gap: 0;
 }
 
-.spotlight{
+.spotlight {
   display: flex;
   background-color: yellow;
   border-radius: 50%;
@@ -53,7 +53,6 @@ header {
   max-height: 25px;
   font-size: 1rem;
 }
-
 
 #home {
   padding: 1rem;
@@ -87,7 +86,7 @@ header {
   background-repeat: no-repeat;
 }
 
-.img-card:hover{
+.img-card:hover {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
@@ -100,9 +99,9 @@ header {
 }
 
 @keyframes bounce-3 {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-60px); }
-  50%  { transform: translateY(0); }
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-60px); }
+  50% { transform: translateY(0); }
   100% { transform: translateY(0); }
 }
 
