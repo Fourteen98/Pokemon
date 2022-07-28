@@ -1,3 +1,6 @@
+import getValues from "./getValues";
+import createPopup from "./popupCreator";
+
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
   const col = document.createElement('div');
@@ -51,11 +54,9 @@ const creatCard = (pokemon) => {
   pokeActionBtnComment.classList.add('btn', 'btn-outline-dark');
   pokeAction.appendChild(pokeActionBtnComment);
 
-  // const pokeActionReservation = document.createElement('button');
-  // pokeActionReservation.attributes.type = 'button';
-  // pokeActionBtnComment.innerText = 'Information';
-  // pokeActionReservation.classList.add('btn', 'btn-outline-dark');
-  // pokeAction.appendChild(pokeActionReservation);
+  pokeActionBtnComment.addEventListener('click', () => {
+    createPopup(getValues(pokemon));
+  })
 
   col.appendChild(description);
   col.appendChild(pokeAction);

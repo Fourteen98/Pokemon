@@ -87,9 +87,49 @@ header {
 }
 
 footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; */
   width: 100%;
   height: 10%;
+}
+
+
+.modal-wrapper {
+  width: 90%;
+  height: 80%;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.modal {
+  padding-top: 20px;
+  left: 25%;
+  background: #fbb;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal * {
+  width: 80%;
+  text-align: center;
+}
+
+.modal-information {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modal-information * {
+  width: 40%;
+}
+
+.notDisplay {
+  display: none;
 }

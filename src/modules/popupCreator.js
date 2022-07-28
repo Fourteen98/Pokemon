@@ -1,13 +1,10 @@
 const createPopup = (item) => {
-
-  console.log(item)
-  console.log("create popup")
   // get modal wrapper and create modal individually
   const modalWrapper = document.querySelector('.modal-wrapper')
+  modalWrapper.style.zIndex = 99;
   const modal = document.createElement('div')
-  modal.classList.add('modal', 'notDisplay');
+  modal.classList.add('modal');
 
-  console.log(item)
   // create img
   const divImg = document.createElement('div')
   const img = document.createElement('img')
@@ -24,20 +21,19 @@ const createPopup = (item) => {
   // create info p
   const infoItem = document.createElement('p');
   infoItem.classList.add('information-item');
-  infoItem.textContent = item.items
-  console.log(infoItem.textContent)
+  infoItem.textContent = `items: ${item.items}`
   divInfo.appendChild(infoItem)
 
 
   const  infoType = document.createElement('p');
   infoType.classList.add('information-games');
-  infoType.textContent = `type: ${item.types}`;
+  infoType.textContent = `type: ${item.type}`;
   divInfo.appendChild(infoType)
 
-  const infoExperience = document.createElement('p');
-  infoExperience.classList.add('information-games');
-  infoExperience.textContent = `something: ${item.exp}`;
-  divInfo.appendChild(infoExperience)
+  const infoBasicExp = document.createElement('p');
+  infoBasicExp.classList.add('information-games');
+  infoBasicExp.textContent = `base experience: ${item.exp}`;
+  divInfo.appendChild(infoBasicExp)
 
   const infoGames = document.createElement('p');
   infoGames.classList.add('information-games');
@@ -48,6 +44,13 @@ const createPopup = (item) => {
   modal.appendChild(title)
   modal.appendChild(divInfo)
   modalWrapper.appendChild(modal)
+
+  window.addEventListener('click',(e) => {
+    if(e.target==modalWrapper){
+      modalWrapper.style.zIndex = -1;
+      modal.remove()
+    }
+  })
 }
 
 export default createPopup

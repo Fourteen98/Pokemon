@@ -1,10 +1,10 @@
 const getValues = (pokemon) => {
-  let heldItems;
+  const heldItems = [];
   if(pokemon.held_items.length == 0) {
-    heldItems = 'cannot drop any items';
+    heldItems.push('cannot drop any items');
   }else {
-    for (let index = 0; index < 2; index++) {
-      heldItems += `${pokemon.held_items[index]}, `
+    for (let index = 0; index < 1; index++) {
+      heldItems.push(`${pokemon.held_items[index].item.name}`)
     }
   }
 
@@ -19,7 +19,7 @@ const getValues = (pokemon) => {
   const arr = {
     img: pokemon.sprites.other['official-artwork'].front_default,
     name: pokemon.name,
-    items: heldItems,
+    items: heldItems.join(', '),
     type: types.join(', '),
     games: games.join(', '),
     exp: pokemon.base_experience
