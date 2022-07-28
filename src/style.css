@@ -111,6 +111,17 @@ footer {
   align-items: center;
 }
 
+.modal.comments {
+  padding: 3%;
+  left: 25%;
+  background: #fbb;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .modal * {
   width: 80%;
   text-align: center;
@@ -124,6 +135,28 @@ footer {
 
 .modal-information * {
   width: 40%;
+}
+
+.comments form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 12px;
+}
+
+.form-p {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.form-input,
+.form-submit {
+  width: 50%;
 }
 
 .notDisplay {

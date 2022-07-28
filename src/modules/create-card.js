@@ -3,6 +3,7 @@ import involvementPostLikes from './involvement-post-likes.js';
 import involvementFetchLikes from './involvement-fetch-likes.js';
 import getValues from './getValues.js';
 import createPopup from './popupCreator.js';
+import createCommentPopup from './commentPopup.js';
 
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
@@ -47,21 +48,27 @@ const creatCard = (pokemon) => {
   const pokeAction = document.createElement('div');
   pokeAction.classList.add('poke-action');
 
-  const pokeActionBtnComment = document.createElement('button');
-  pokeActionBtnComment.attributes.type = 'button';
-  pokeActionBtnComment.innerText = 'Information';
-  pokeActionBtnComment.classList.add('btn', 'btn-outline-dark');
-  pokeAction.appendChild(pokeActionBtnComment);
+  const pokeActionBtnInfo = document.createElement('button');
+  pokeActionBtnInfo.attributes.type = 'button';
+  pokeActionBtnInfo.innerText = 'Information';
+  pokeActionBtnInfo.classList.add('btn', 'btn-outline-dark');
+  pokeAction.appendChild(pokeActionBtnInfo);
 
-  const pokeActionReservation = document.createElement('button');
-  pokeActionReservation.attributes.type = 'button';
-  pokeActionReservation.innerText = 'Comments';
-  pokeActionReservation.classList.add('btn', 'btn-outline-dark');
-  pokeAction.appendChild(pokeActionReservation);
+  const pokeActionBtnComments = document.createElement('button');
+  pokeActionBtnComments.attributes.type = 'button';
+  pokeActionBtnComments.innerText = 'Comments';
+  pokeActionBtnComments.classList.add('btn', 'btn-outline-dark');
+  pokeAction.appendChild(pokeActionBtnComments);
 
-  pokeActionBtnComment.addEventListener('click', () => {
+  // * create infoPopup 
+  pokeActionBtnInfo.addEventListener('click', () => {
     createPopup(getValues(pokemon));
   });
+  
+  // * create commentPopup 
+  pokeActionBtnComments.addEventListener('click', () => {
+    createCommentPopup(getValues(pokemon))
+  })
 
   col.appendChild(description);
   col.appendChild(pokeAction);
