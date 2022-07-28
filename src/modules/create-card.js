@@ -1,6 +1,8 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, radix */
 import involvementPostLikes from './involvement-post-likes.js';
 import involvementFetchLikes from './involvement-fetch-likes.js';
+import getValues from './getValues.js';
+import createPopup from './popupCreator.js';
 
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
@@ -57,13 +59,16 @@ const creatCard = (pokemon) => {
   pokeActionReservation.classList.add('btn', 'btn-outline-dark');
   pokeAction.appendChild(pokeActionReservation);
 
+  pokeActionBtnComment.addEventListener('click', () => {
+    createPopup(getValues(pokemon));
+  });
+
   col.appendChild(description);
   col.appendChild(pokeAction);
 
   row.appendChild(col);
 
   iTag.addEventListener('click', (e) => {
-    // eslint-disable-next-line radix
     const likes = parseInt(likeCount.innerText.split(' ')[0]);
     likeCount.innerText = `${likes + 1} likes`;
     involvementPostLikes(e, likeCount.innerText.split(' ')[0])
