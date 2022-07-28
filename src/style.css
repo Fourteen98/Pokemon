@@ -37,6 +37,23 @@ header {
   gap: 20%;
 }
 
+.spot-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.spotlight {
+  display: flex;
+  background-color: yellow;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  max-height: 25px;
+  font-size: 1rem;
+}
+
 #home {
   padding: 1rem;
   border-radius: 5px;
@@ -57,7 +74,7 @@ header {
 }
 
 .col img {
-  width: 10rem;
+  width: 15rem;
   height: 8rem;
 }
 
@@ -67,6 +84,25 @@ header {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.img-card:hover {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  cursor: pointer;
+}
+
+.bounce-3 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-3 {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-60px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(0); }
 }
 
 .description {
