@@ -1,5 +1,5 @@
-import getValues from "./getValues";
-import createPopup from "./popupCreator";
+import getValues from './getValues.js';
+import createPopup from './popupCreator.js';
 
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
@@ -10,11 +10,6 @@ const creatCard = (pokemon) => {
   imgCard.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;
   imgCard.classList.add('img-card');
   col.appendChild(imgCard);
-  // const cardImg = document.createElement('img');
-  // cardImg.attributes.src = pokemon.sprites.other['official-artwork']['front_default'];
-  //
-  // cardImg.attributes.alt = "pokemon-sprites";
-  // col.appendChild(cardImg);
 
   const description = document.createElement('div');
   description.classList.add('description');
@@ -56,7 +51,7 @@ const creatCard = (pokemon) => {
 
   pokeActionBtnComment.addEventListener('click', () => {
     createPopup(getValues(pokemon));
-  })
+  });
 
   col.appendChild(description);
   col.appendChild(pokeAction);

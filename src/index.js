@@ -12,4 +12,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     creatCard(pokemonJson);
   });
 });
-
