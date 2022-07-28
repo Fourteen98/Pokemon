@@ -68,6 +68,8 @@ const creatCard = (pokemon) => {
 
   row.appendChild(col);
 
+  setTimeout(() => involvementFetchLikes(pokemon.id.toString(), likeCount), 1000);
+
   iTag.addEventListener('click', (e) => {
     const likes = parseInt(likeCount.innerText.split(' ')[0]);
     likeCount.innerText = `${likes + 1} likes`;
