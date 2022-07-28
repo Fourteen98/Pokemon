@@ -99,13 +99,14 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  display: flex;
+  justify-content: center;
 }
 
 .modal {
   padding-top: 20px;
-  left: 25%;
   background: #fbb;
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,11 +114,7 @@ footer {
 
 .modal.comments {
   padding: 3%;
-  left: 25%;
-  background: #fbb;
-  width: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -143,6 +140,34 @@ footer {
   flex-wrap: wrap;
   justify-content: start;
   gap: 12px;
+}
+
+.modal-ul {
+  height: 40%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.modal-ul li {
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  border-bottom: 2px solid #000
+}
+
+.modal-ul li * {
+  text-align: start;
+  width: 45%;
+  height:max-content;
+  margin: 0;
+}
+
+.ul-date {
+  width: 100%;
 }
 
 .form-p {
