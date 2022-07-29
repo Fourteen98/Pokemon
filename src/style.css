@@ -23,6 +23,9 @@ header {
 .nav {
   width: 100%;
   gap: 20%;
+  border-radius: 10px;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .nav-link {
@@ -46,7 +49,7 @@ header {
 
 .spotlight {
   display: flex;
-  background-color: yellow;
+  background-color: #ffcb05;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -56,21 +59,27 @@ header {
 
 #home {
   padding: 1rem;
-  border-radius: 5px;
-  background-color: #f5f5f5;
+  border-radius: 10px;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
   max-height: 700px;
   min-height: 700px;
   overflow-y: scroll;
 }
 
 .row {
-  gap: 10%;
+  gap: 5%;
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  padding-bottom: 5%;
+  margin-bottom: 2%;
+  box-shadow: #89d4cf 0 0 20px;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 258px;
+  max-width: 318px;
 }
 
 .col img {
@@ -79,8 +88,8 @@ header {
 }
 
 .img-card {
-  width: 10rem;
-  height: 8rem;
+  height: 10rem;
+  width: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,6 +105,14 @@ header {
 .bounce-3 {
   animation-name: bounce-3;
   animation-timing-function: ease;
+}
+
+.bounce-4 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
 }
 
 @keyframes bounce-3 {
@@ -141,7 +158,9 @@ footer {
 
 .modal {
   padding: 20px 0;
-  background: #fbb;
+  background-color: #d5fefd;
+  background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
+  border-radius: 10%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -236,8 +255,10 @@ footer {
 
 .form-submit {
   width: min-content;
-  background: rgb(244, 28, 28);
-  color: #fff;
+  background-color: #52a7c1;
+  background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+  border: none;
+  border-radius: 10px;
   font-weight: 900;
   padding: 0.3rem 1.5rem;
   letter-spacing: 0.2em;
@@ -257,9 +278,26 @@ footer {
   }
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 @media screen and (min-width: 768px) {
   .modal-img {
     max-width: 350px;
+    transform: scale(1.2);
+    animation: shake 0.5s;
+    animation-iteration-count: 4;
   }
 
   .modal {

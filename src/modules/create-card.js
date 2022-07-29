@@ -1,9 +1,9 @@
 /* eslint-disable no-console, radix */
 import involvementPostLikes from './involvement-post-likes.js';
 import involvementFetchLikes from './involvement-fetch-likes.js';
-import getValues from './getValues.js';
-import createPopup from './popupCreator.js';
-import createCommentPopup from './commentPopup.js';
+import getValues from './get-values.js';
+import createPopup from './popup-creator.js';
+import createCommentPopup from './comment-popup.js';
 
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
