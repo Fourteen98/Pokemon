@@ -1,4 +1,4 @@
-import commentAPI from './commentAPI.js';
+import commentAPI from './involment-comment.js';
 
 const updateUl = (data, ul, h3) => {
   ul.innerHTML = '';
