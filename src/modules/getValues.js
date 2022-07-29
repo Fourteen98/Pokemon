@@ -12,8 +12,12 @@ const getValues = (pokemon) => {
   pokemon.types.forEach((element) => types.push(`${element.type.name}`));
 
   const games = [];
-  for (let index = 0; index < 2; index += 1) {
-    games.push(`${pokemon.game_indices[index].version.name}`);
+  if (pokemon.game_indices.length === 0) {
+    games.push('has not appear yet or is on new games');
+  } else {
+    for (let index = 0; index < 2; index += 1) {
+      games.push(`${pokemon.game_indices[index].version.name}`);
+    }
   }
 
   const arr = {

@@ -9,7 +9,7 @@ const creatCard = (pokemon) => {
   const row = document.getElementById('row');
   const col = document.createElement('div');
   col.classList.add('col');
-
+  
   const cardImg = document.createElement('div');
   cardImg.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;
   cardImg.classList.add('img-card', 'bounce-3');
@@ -76,9 +76,6 @@ const creatCard = (pokemon) => {
   row.appendChild(col);
 
   setTimeout(() => involvementFetchLikes(pokemon.id.toString(), likeCount)
-    .then(() => {
-      console.log('likes fetched');
-    })
     .catch((error) => {
       console.log(error);
     }), 1000);
