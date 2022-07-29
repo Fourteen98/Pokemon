@@ -7,11 +7,11 @@ document.body.innerHTML = '<h3 class="modal-h3">coments (1) </h3><ul class="moda
 
 const testData = [
   {
-  username: 'karen',
-  comment: 'i love this pokemon',
-  creation_date: '2022-07-29'
-}
-]
+    username: 'karen',
+    comment: 'i love this pokemon',
+    creation_date: '2022-07-29',
+  },
+];
 
 describe('counter for api and pokemon card', () => {
   test('verify number of items on board is equal api limit', () => {
@@ -19,9 +19,9 @@ describe('counter for api and pokemon card', () => {
   });
 
   test('verify number of comments', () => {
-  updateUl(testData, document.querySelector('.modal-ul'))
-    const li = document.querySelectorAll('.comment-li')
-    const arrLI = Array.from(li)
+    updateUl(testData, document.querySelector('.modal-ul'));
+    const li = document.querySelectorAll('.comment-li');
+    const arrLI = Array.from(li);
     expect(arrLI.length).toBe(2);
   });
 });
