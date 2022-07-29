@@ -76,6 +76,7 @@ header {
   flex-direction: column;
   margin-bottom: 2%;
   box-shadow: #89d4cf 0 0 20px;
+  border-radius: 10px;
   padding: 15px;
   min-width: 258px;
   max-width: 318px;
