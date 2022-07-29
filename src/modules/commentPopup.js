@@ -1,10 +1,11 @@
 import commentAPI from './commentAPI.js';
 
-const updateUl = (data, ul, h3) => {
+export const updateUl = (data, ul, h3) => {
   ul.innerHTML = '';
   if (data.length > 0) {
     data.forEach((child) => {
       const commentLi = document.createElement('li');
+      commentLi.classList.add('comment-li')
 
       const usernameP = document.createElement('p');
       usernameP.textContent = `user: ${child.username}`;
