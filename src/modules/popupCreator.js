@@ -1,4 +1,4 @@
-import chooseStyle from "./card-style";
+import chooseStyle from './card-style.js';
 
 const createPopup = (item) => {
   // get modal wrapper and create modal individually
@@ -6,7 +6,7 @@ const createPopup = (item) => {
   modalWrapper.style.zIndex = 99;
   const modal = document.createElement('div');
   modal.classList.add('modal');
-  chooseStyle(item.type.split(',')[0],modal)
+  chooseStyle(item.type.split(',')[0], modal);
   // create img
   const divImg = document.createElement('div');
   const img = document.createElement('img');
