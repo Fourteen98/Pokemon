@@ -8,7 +8,7 @@ import createCommentPopup from './comment-popup.js';
 const creatCard = (pokemon) => {
   const row = document.getElementById('row');
   const col = document.createElement('div');
-  col.classList.add('col');
+  col.classList.add('single-card');
 
   const cardImg = document.createElement('div');
   cardImg.style.backgroundImage = `url(${pokemon.sprites.other['official-artwork'].front_default})`;

@@ -41,3 +41,18 @@ selection.addEventListener('change', async () => {
     spotlight.innerText = calculateNumberOfItems(row.childElementCount, end);
   });
 });
+
+const menu = document.querySelector('.menu');
+const popMenu = document.querySelector('.popup-menu');
+
+menu.addEventListener('click', (e) => {
+  popMenu.classList.remove('non-active');
+  popMenu.classList.add('active');
+
+});
+
+const close = document.querySelector('.close');
+close.addEventListener('click', () => {
+  popMenu.classList.remove('active');
+  popMenu.classList.add('non-active');
+});
