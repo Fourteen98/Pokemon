@@ -80,8 +80,8 @@ const creatCard = (pokemon) => {
   iTag.addEventListener('click', (e) => {
     const likes = parseInt(likeCount.innerText.split(' ')[0]);
     likeCount.innerText = `${likes + 1} likes`;
-    involvementPostLikes(e, likeCount.innerText.split(' ')[0])
-    involvementFetchLikes(e.target.id, likeCount)
+    involvementPostLikes(e, likeCount.innerText.split(' ')[0]);
+    involvementFetchLikes(e.target.id, likeCount);
   });
 };
 
