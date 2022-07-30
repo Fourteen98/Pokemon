@@ -75,20 +75,13 @@ const creatCard = (pokemon) => {
 
   row.appendChild(col);
 
-  setTimeout(() => involvementFetchLikes(pokemon.id.toString(), likeCount)
-    .catch((error) => {
-      console.log(error);
-    }), 1000);
+  setTimeout(() => involvementFetchLikes(pokemon.id.toString(), likeCount), 1000);
 
   iTag.addEventListener('click', (e) => {
     const likes = parseInt(likeCount.innerText.split(' ')[0]);
     likeCount.innerText = `${likes + 1} likes`;
     involvementPostLikes(e, likeCount.innerText.split(' ')[0])
-      .then((r) => console.log(r))
-      .catch((err) => console.log(err));
     involvementFetchLikes(e.target.id, likeCount)
-      .then((r) => console.log(r))
-      .catch((err) => console.log(err));
   });
 };
 

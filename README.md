@@ -42,6 +42,10 @@ clone the repo or download from https://github.com/Fourteen98/Pokemone.git
 
 `npm start `
 This automatically start app on localhost:3000
+### test the app
+
+`npm test `
+This automatically test the app for certain situations
 
 ### Deployment
 
