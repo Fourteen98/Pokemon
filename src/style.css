@@ -95,7 +95,7 @@ select:focus-visible {
   box-shadow: #89d4cf 0 0 20px;
   border-radius: 10px;
   padding: 15px;
-  min-width: 258px;
+  min-width: 248px;
   max-width: 318px;
 }
 
@@ -310,7 +310,10 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  
+  .col {
+    min-width: calc(100%/4);
+    max-width: 318px;
+  }
   .modal-img {
     max-width: 350px;
     transform: scale(1.2);
