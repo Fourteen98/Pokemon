@@ -5,6 +5,8 @@
 }
 
 body {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAuwq1HulMchJDkh9SPs6rhaPyrA4iTXf1Rw&usqp=CAU) no-repeat;
+  background-size: cover;
   padding: 2% 10%;
   min-height: 100vh;
 }
@@ -65,8 +67,23 @@ header {
   max-height: 700px;
   min-height: 700px;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
 }
 
+select {
+  border-radius: 10px;
+  border:none;
+}
+
+select:focus,
+select:focus-visible {
+  border:none;
+  outline: none;
+}
 .row {
   gap: 5%;
 }
@@ -293,6 +310,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  
   .modal-img {
     max-width: 350px;
     transform: scale(1.2);

@@ -33,12 +33,10 @@ const createCommentPopup = async (pokemon) => {
 
   const commentModal = document.createElement('div');
   commentModal.classList.add('modal', 'comments');
-  // chooseStyle(pokemon.type[0], commentModal);
 
   const h3 = document.createElement('h3');
   h3.classList.add('modal-h3');
   h3.textContent = 'coments';
-  // h3.classList.add('form-p');
 
   const commentsData = await commentAPI.getComment(pokemon.id);
   const commentUl = document.createElement('ul');
