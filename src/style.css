@@ -411,8 +411,8 @@ footer {
     width: 100vw;
     height: 100vh;
     align-items: center;
-    padding: 5%;
-    gap: 3%;
+    padding: 10% 5% 5% 5%;
+    gap: 5%;
   }
 
   .hamburger {
@@ -427,9 +427,17 @@ footer {
     justify-content: end;
   }
 
+  .nav-text {
+    width: 100%;
+  }
+
   .mobile-a {
+    width: 100%;
     color: #555;
     font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
