@@ -1,4 +1,3 @@
-import chooseStyle from './card-style.js';
 import commentAPI from './involment-comment.js';
 
 export const updateUl = (data, ul, h3) => {

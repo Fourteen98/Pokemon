@@ -45,10 +45,9 @@ selection.addEventListener('change', async () => {
 const menu = document.querySelector('.menu');
 const popMenu = document.querySelector('.popup-menu');
 
-menu.addEventListener('click', (e) => {
+menu.addEventListener('click', () => {
   popMenu.classList.remove('non-active');
   popMenu.classList.add('active');
-
 });
 
 const close = document.querySelector('.close');

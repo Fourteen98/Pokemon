@@ -20,7 +20,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3%;
-
 }
 
 .head-nav {
@@ -82,16 +81,16 @@ header {
 
 select {
   border-radius: 10px;
-  border:none;
+  border: none;
 }
 
 select:focus,
 select:focus-visible {
-  border:none;
+  border: none;
   outline: none;
 }
 
-.container{
+.container {
   width: 100%;
 }
 
@@ -325,9 +324,10 @@ footer {
 
 @media screen and (min-width: 768px) {
   .col {
-    min-width: calc(100%/4);
+    min-width: calc(100% / 4);
     max-width: 318px;
   }
+
   .modal-img {
     max-width: 350px;
     transform: scale(1.2);
@@ -357,8 +357,7 @@ footer {
     width: 30%;
   }
 
-
-  .nav-list{
+  .nav-list {
     width: 80%;
     display: flex;
     justify-content: space-evenly;
@@ -373,7 +372,6 @@ footer {
     color: #555;
     font-size: 1.5rem;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -423,7 +421,7 @@ footer {
     justify-content: flex-end;
   }
 
-  .close  {
+  .close {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -431,7 +429,7 @@ footer {
 
   .mobile-a {
     color: #555;
-    font-size: 2em
+    font-size: 2em;
   }
 }
 
