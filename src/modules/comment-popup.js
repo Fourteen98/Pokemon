@@ -1,5 +1,5 @@
 import chooseStyle from './card-style.js';
-import commentAPI from './commentAPI.js';
+import commentAPI from './involment-comment.js';
 
 export const updateUl = (data, ul, h3) => {
   ul.innerHTML = '';
@@ -33,7 +33,7 @@ const createCommentPopup = async (pokemon) => {
 
   const commentModal = document.createElement('div');
   commentModal.classList.add('modal', 'comments');
-  chooseStyle(pokemon.type[0]);
+  // chooseStyle(pokemon.type[0], commentModal);
 
   const h3 = document.createElement('h3');
   h3.classList.add('modal-h3');
