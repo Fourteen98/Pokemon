@@ -1,19 +1,57 @@
-import _ from 'lodash';
-import printMe from './print.js';
+import './style.css';
+import creatCard from './modules/create-card.js';
+import {
+  fetchApi, calculateNumberOfItems, randomNumber, end,
+} from './modules/pokemon-api.js';
 
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
+const spotlight = document.querySelector('.spotlight');
+const row = document.getElementById('row');
+const selection = document.querySelector('#type-selection');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+document.addEventListener('DOMContentLoaded', async () => {
+  const res = await fetchApi(selection.value);
+  const pokemonResult = res.pokemon;
+  const lessPokemon = [];
+  for (let i = 0; i < end; i += 1) {
+    lessPokemon.push(pokemonResult[i]);
+  }
+  lessPokemon.forEach(async (pokemon) => {
+    const { url } = pokemon.pokemon;
+    const pokemonData = await fetch(url);
+    const pokemonJson = await pokemonData.json();
+    creatCard(pokemonJson);
+    spotlight.innerText = calculateNumberOfItems(row.childElementCount, end);
+  });
+});
 
-  btn.innerHTML = 'Click me and check the console';
-  btn.onclick = printMe;
+selection.addEventListener('change', async () => {
+  document.querySelector('#row').innerHTML = '';
+  const res = await fetchApi(selection.value);
+  const pokemonResult = res.pokemon;
+  const lessPokemon = [];
+  const end = randomNumber();
+  for (let i = 0; i < end; i += 1) {
+    lessPokemon.push(pokemonResult[i]);
+  }
+  lessPokemon.forEach(async (pokemon) => {
+    const { url } = pokemon.pokemon;
+    const pokemonData = await fetch(url);
+    const pokemonJson = await pokemonData.json();
+    creatCard(pokemonJson);
+    spotlight.innerText = calculateNumberOfItems(row.childElementCount, end);
+  });
+});
 
-  element.appendChild(btn);
+const menu = document.querySelector('.menu');
+const popMenu = document.querySelector('.popup-menu');
 
-  return element;
-}
+menu.addEventListener('click', () => {
+  popMenu.classList.remove('non-active');
+  popMenu.classList.add('active');
+});
 
-document.body.appendChild(component());
+const close = document.querySelector('.close');
+close.addEventListener('click', () => {
+  popMenu.classList.remove('active');
+  popMenu.classList.add('non-active');
+});

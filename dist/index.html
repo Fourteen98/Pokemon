@@ -4,9 +4,114 @@
     <meta charset="UTF-8">
     <title>Webpack Exercise</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-    <link rel="stylesheet" href="style.css">
-<script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script><script defer src="/print.bundle.js"></script></head>
+
+    <!-- Boostrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
-    <h1>Hello webpack!</h1>
+<div class="main">
+    <header>
+        <nav class="on-mobile">
+            <ul class="popup-menu non-active">
+                <li class="close"><a class="x-icon"><i class="fa-solid fa-x fa-1x"></i></a></li>
+                <li class="nav-text"><a href='#' class="pokemons mobile-a"><span>Pokemon's</span> <i
+                        class="fa-solid fa-chevron-right left-arrow"></i></a>
+                <li class="nav-text"><a href='#' class="regions mobile-a"><span>Regions</span> <i
+                        class="fa-solid fa-chevron-right left-arrow"></i></a>
+                <li class="nav-text"><a href='#' class="championship mobile-a"><span>Championship</span><i
+                        class="fa-solid fa-chevron-right left-arrow"></i></a></li>
+            </ul>
+            <ul class="default">
+                <li>
+                    <a class="" href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/120px-International_Pok%C3%A9mon_logo.svg.png?20150121202211"
+                             alt="logo">
+                    </a>
+                </li>
+                <li><a class="menu"><i class="fa-solid fa-bars fa-2x"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="on-desktop head-nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/120px-International_Pok%C3%A9mon_logo.svg.png?20150121202211"
+                 alt="logo">
+            <ul class=" nav-list">
+                <li class="spot-nav nav-text">
+                    <a class="desktop-a" href="#">Pokemon's <span class="sr-only">(current)</span></a>
+                    <div class="spotlight "></div>
+                </li>
+                <li class="nav-text">
+                    <a class="desktop-a" href="#">Regions</a>
+                </li>
+                <li class="nav-text">
+                    <a class="desktop-a" href="#">Championship</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <label for="type-selection">choose the type of Pokemon</label>
+        <select name="types" id="type-selection">
+            <option value="normal">normal</option>
+            <option value="fighting">fighting</option>
+            <option value="flying">flying</option>
+            <option value="poison">poison</option>
+            <option value="ground">ground</option>
+            <option value="rock">rock</option>
+            <option value="ghost">ghost</option>
+            <option value="bug">bug</option>
+            <option value="steel">steel</option>
+            <option value="fire">fire</option>
+            <option value="water">water</option>
+            <option value="grass">grass</option>
+            <option value="electric">electric</option>
+            <option value="psychic">psychic</option>
+            <option value="ice">ice</option>
+            <option value="dragon">dragon</option>
+            <option value="dark">dark</option>
+            <option value="fairy">fairy</option>
+        </select>
+        <div class="container">
+            <div id="row">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+            <a href="https://github.com/Fourteen98/Pokemone"> Fourteen98 & Aiziji</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+
+
+<div class="modal-wrapper">
+
+</div>
+
 </body>
 </html>
