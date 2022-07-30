@@ -19,7 +19,7 @@
 - Webpack
 
 ### Click link below for a live demo
-[Demo Link](https://github.com/Fourteen98/Pokemon/dist/)
+[Demo Link](https://fourteen98.github.io/Pokemon/dist/)
 ## Getting Started
 
 ### Prerequisites
